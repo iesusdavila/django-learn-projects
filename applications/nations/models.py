@@ -8,4 +8,4 @@ class Nationality(models.Model):
     #bandera = models.ImageField(upload_to='banderas/')
 
     def __str__(self):
-        return self.nombre
+        return self.name

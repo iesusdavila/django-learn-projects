@@ -20,4 +20,4 @@ class Player(models.Model):
         unique_together = ('first_name', 'last_name')
 
     def __str__(self):
-        return self.nombre
+        return self.name

@@ -1,13 +1,13 @@
 from django.db import models
 
-from applications.club.models import League
 from applications.nations.models import Nationality
 
 # Create your models here.
-class Team(models.Model):
-    name = models.CharField(max_length=100)
-    league = models.ForeignKey(League, on_delete=models.CASCADE)
+class League(models.Model):
+
+    name = models.CharField("Name",max_length=100)
     country = models.ForeignKey(Nationality, on_delete=models.CASCADE)
+    num_teams = models.PositiveIntegerField("Number of teams", default=0)
 
     def __str__(self):
         return self.name
